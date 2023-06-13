@@ -2,11 +2,11 @@ def is_anagram(input_first_string, input_second_string):
     if not input_first_string and not input_second_string:
         return '', '', False
 
-    sorted_first_string = ''.join(merge_sort(list(input_first_string.lower())))
-    sorted_second_string = ''.join(
+    first_string = ''.join(merge_sort(list(input_first_string.lower())))
+    second_string = ''.join(
         merge_sort(list(input_second_string.lower())))
 
-    return sorted_first_string, sorted_second_string, sorted_first_string == sorted_second_string
+    return first_string, second_string, first_string == second_string
 
 
 def merge_sort(lst):
